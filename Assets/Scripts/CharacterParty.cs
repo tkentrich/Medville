@@ -11,9 +11,13 @@ public class CharacterParty : MonoBehaviour {
 			print("Child: " + trf.gameObject);
 			bool validTarget = false;
 			CharacterController con = GetComponentInChildren<CharacterController>();
-			if (con is CharacterController && con.) {
-				
+			if (con is CharacterController) {
+				validTarget = true;
 			}
+			if (validTarget) {
+				targets.Add(con.gameObject);
+			}
+
 		}
 		/*foreach (GameObject obj in GetComponentsInChildren<GameObject>()) {
 			if (obj.CompareTag("Character")) {

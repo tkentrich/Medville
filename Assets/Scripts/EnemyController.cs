@@ -5,6 +5,7 @@ public class EnemyController : MonoBehaviour {
 
 	public enum EnemyState {Idle, Recover, Attack, TakeDamage, Dead};
 
+	public OverallController controller;
 	public GameObject model;
 	public float recoverTime;
 	public int startingHealth;
@@ -43,6 +44,14 @@ public class EnemyController : MonoBehaviour {
 			case EnemyState.Recover:
 				recoverTimeLeft = recoverTime;
 				break;
+		}
+	}
+
+	void OnMouseUp() {
+		if (controller.GetNextClick() == OverallController.NextClick.SELECT) {
+			controller.Select(gameObject);
+		} else if (controller.GetNextClick() == OverallController.NextClick.TARGET) {
+			controller.SetTarget(gameObject);
 		}
 	}
 }
