@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\CharacterController.cs" />
      <Compile Include="Assets\Scripts\CharacterParty.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\OverallController.cs" />
      <Compile Include="Assets\Scripts\PartyInfo.cs" />
      <Compile Include="Assets\Scripts\ScorpionController.cs" />
  <Reference Include="UnityEngine.UI">
